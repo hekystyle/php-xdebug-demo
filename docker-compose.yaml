@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  xdebug:
+    build: .
+    ports:
+      - 8888:80
+    volumes:
+      - .:/var/www/html
+      - ./xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
